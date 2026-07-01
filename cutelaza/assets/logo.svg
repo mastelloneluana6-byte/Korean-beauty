@@ -1,0 +1,10 @@
+<svg viewBox="0 0 400 240" xmlns="http://www.w3.org/2000/svg">
+  <g fill="none" stroke="#abc9e3" stroke-width="5" stroke-linecap="round">
+    <!-- Teardrop -->
+    <path d="M200 20 Q200 20 165 95 A 42 42 0 0 0 235 95 Q235 20 200 20 Z" />
+    <!-- Ripples -->
+    <path d="M150 145 Q 200 175 250 145" stroke-width="3" />
+    <path d="M135 160 Q 200 195 265 160" stroke-width="1.5" />
+  </g>
+  <text x="200" y="225" font-family="'Inter', sans-serif" font-weight="300" font-size="32" letter-spacing="0.35em" text-anchor="middle" fill="#abc9e3">CUTELAZA</text>
+</svg>

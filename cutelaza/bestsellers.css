@@ -1,0 +1,170 @@
+/* BESTSELLERS CAROUSEL SECTION */
+.bestsellers-carousel-section {
+    background: #e1e3e4; /* Light grey/beige from screenshot */
+    padding: 6rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.bsc-title, .bsc-subtitle {
+    font-family: 'Playfair Display', serif;
+    font-size: 4.5rem;
+    font-weight: 400;
+    letter-spacing: 0.15em;
+    color: #333;
+    text-align: center;
+    margin: 0;
+    text-transform: uppercase;
+}
+.bsc-subtitle {
+    margin-top: 2rem;
+}
+
+.bsc-wrapper {
+    width: 100vw;
+    margin-top: 3rem;
+    padding: 2rem 0;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none; /* Firefox */
+    scroll-behavior: smooth;
+}
+.bsc-wrapper::-webkit-scrollbar {
+    display: none; /* Safari/Chrome */
+}
+
+.bsc-track {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    /* Padding to allow centering of first and last items */
+    padding: 0 50vw;
+    width: max-content;
+}
+
+.bsc-item {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    cursor: pointer;
+    transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+    opacity: 0.5;
+    scroll-snap-align: center;
+    transform: scale(0.9);
+}
+
+.bsc-item.active {
+    opacity: 1;
+    transform: scale(1);
+    cursor: default;
+}
+
+/* Left column containing image and small label */
+.bsc-left-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.bsc-img-wrapper {
+    width: 140px;
+    height: 140px;
+    transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+    background: #fff;
+}
+.bsc-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.bsc-item.active .bsc-img-wrapper {
+    width: 380px;
+    height: 380px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+/* Small label under inactive images */
+.bsc-small-label {
+    font-family: 'Playfair Display', serif;
+    font-size: 0.9rem;
+    color: #555;
+    opacity: 1;
+    transition: opacity 0.3s;
+    white-space: nowrap;
+}
+.bsc-item.active .bsc-small-label {
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+}
+
+/* Details (Text on the right of the active image) */
+.bsc-details {
+    width: 0;
+    opacity: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+    white-space: nowrap;
+}
+
+.bsc-item.active .bsc-details {
+    width: 300px;
+    opacity: 1;
+    white-space: normal;
+}
+
+.bsc-item-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    color: #333;
+    line-height: 1.2;
+    letter-spacing: 0.05em;
+}
+.bsc-item-title span {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    display: block;
+    margin-top: -5px;
+    font-weight: 400;
+}
+
+.bsc-item-desc {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.85rem;
+    color: #666;
+    margin-bottom: 2.5rem;
+    line-height: 1.6;
+}
+
+.bsc-item-link {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #000;
+    text-decoration: none;
+    letter-spacing: 0.1em;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+.bsc-item-link:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .bsc-title, .bsc-subtitle { font-size: 2.5rem; }
+    .bsc-item { flex-direction: column; text-align: center; gap: 1rem; }
+    .bsc-item.active .bsc-img-wrapper { width: 250px; height: 250px; }
+    .bsc-item.active .bsc-details { width: 100%; align-items: center; }
+    .bsc-track { padding: 0 50vw; }
+}

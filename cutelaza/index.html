@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cutelaza | Beauté Organique Japonaise</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <!-- Google Font for Handwriting -->
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css?v=3">
+    <link rel="stylesheet" href="megamenu.css?v=2">
+    <link rel="stylesheet" href="chatbot.css?v=2">
+</head>
+<body class="loading">
+
+    <!-- SVG DISPLACEMENT FILTER FOR LIQUID EFFECT -->
+    <svg style="width:0;height:0;position:absolute;" aria-hidden="true" focusable="false">
+      <filter id="liquid-filter" x="-20%" y="-20%" width="140%" height="140%" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" color-interpolation-filters="linearRGB">
+        <feTurbulence type="fractalNoise" baseFrequency="0.01 0.01" numOctaves="3" seed="2" stitchTiles="stitch" x="0%" y="0%" width="100%" height="100%" result="turbulence"/>
+        <feDisplacementMap in="SourceGraphic" in2="turbulence" scale="0" xChannelSelector="R" yChannelSelector="B" x="0%" y="0%" width="100%" height="100%" result="displacementMap"/>
+      </filter>
+    </svg>
+
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <div class="preloader">
+        <div class="counter">0%</div>
+        <div class="preloader-text">CUTELAZA.</div>
+    </div>
+
+    <!-- Black Top Bar -->
+    <div class="top-bar-exact">
+        Livraison gratuite pour toute commande de plus de 50€ | <a href="#">Détails & conditions</a>
+    </div>
+
+    <!-- Exact White Navbar -->
+    <nav class="nav-exact">
+        <a href="#" class="nav-exact-logo">
+            <img src="assets/logo.svg" alt="Cutelaza Logo" class="brand-logo">
+        </a>
+        <div class="nav-exact-links">
+            <div class="nav-item-has-menu">
+                <a href="#">Boutique</a>
+                <div class="megamenu-panel">
+                    <div class="mega-grid">
+                        <div class="mega-list">
+                            <h4>Catégories</h4>
+                            <a href="#">Tous les produits</a>
+                            <a href="#">Nettoyants</a>
+                            <a href="#">Sérums & Ampoules</a>
+                            <a href="#">Crèmes & Hydratants</a>
+                            <a href="#">Soins Solaire</a>
+                        </div>
+                        <div class="mega-list">
+                            <h4>Besoins</h4>
+                            <a href="#">Éclat & Teint terne</a>
+                            <a href="#">Anti-âge & Fermeté</a>
+                            <a href="#">Hydratation intense</a>
+                            <a href="#">Acné & Imperfections</a>
+                        </div>
+                        <div class="mega-feature">
+                            <img src="assets/probio_3.jpg" alt="Probio Line">
+                            <div class="mega-feature-text">
+                                <h5>Ligne Probio-Cica</h5>
+                                <p>Découvrez notre nouvelle collection apaisante.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a href="#">À propos</a>
+            <div class="nav-item-has-menu">
+                <a href="#">Soins du visage</a>
+                <div class="megamenu-panel">
+                    <div class="mega-grid">
+                        <div class="mega-list">
+                            <h4>Par type de peau</h4>
+                            <a href="#">Peau Sensible</a>
+                            <a href="#">Peau Sèche</a>
+                            <a href="#">Peau Mixte à Grasse</a>
+                            <a href="#">Peau Mature</a>
+                        </div>
+                        <div class="mega-feature">
+                            <img src="assets/probio_2.jpg" alt="Soins">
+                            <div class="mega-feature-text">
+                                <h5>Consultation Beauté</h5>
+                                <p>Trouvez votre routine sur-mesure avec nos experts.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a href="#">Programme fidélité</a>
+        </div>
+        <div class="nav-exact-icons">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+            <div class="cart-wrap">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                <span>(0)</span>
+            </div>
+        </div>
+    </nav>
+
+    <main id="smooth-wrapper">
+        <div id="smooth-content">
+            <!-- SPLIT SCREEN HERO SECTION -->
+            <section class="hero-split">
+                
+                <!-- Left Side -->
+                <div class="split-side split-left">
+                    <div class="product-widget">
+                        <img src="assets/hero_product.png" alt="Product">
+                        <a href="#">Catalog ⟶</a>
+                    </div>
+                    <div class="giant-text-container">
+                        <div class="giant-text dark-text">CUTELAZA</div>
+                    </div>
+                </div>
+
+                <!-- Right Side -->
+                <div class="split-side split-right">
+                    <img src="assets/hero_model.png" class="bg-img" alt="Model">
+                    <div class="giant-text-container">
+                        <div class="giant-text white-text">CUTELAZA</div>
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- TEXT SPACER SECTION -->
+            <section class="text-spacer-section">
+                <div class="spacer-content fade-up-text">
+                    <h2>Révélez votre vraie nature.</h2>
+                    <p>Découvrez une collection de soins repensée pour l'essentiel. Des formules pures, une efficacité prouvée, et un éclat qui vient de l'intérieur.</p>
+                </div>
+            </section>
+
+            <!-- SECONDARY HERO SECTION -->
+            <section class="secondary-hero-section">
+                <div class="sh-image-container">
+                    <img src="assets/secondary_hero.jpg" alt="Model">
+                    
+                    <!-- Floating product widget -->
+                    <div class="sh-floating-widget">
+                        <img src="assets/carousel_3.jpg" alt="Cutelaza Calm Serum">
+                        <div class="sh-widget-info">
+                            <span class="sh-w-title">Cutelaza Calm Serum</span>
+                            <span class="sh-w-price">17€</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="sh-text-container">
+                    <h2>Texture Parfaite.<br>Résultat Optimal.</h2>
+                    <p>Une formule bien pensée pour le soin complet de votre peau. Sérum, nutrition et hydratation — tout en un seul produit.</p>
+                    <a href="#" class="sh-btn">Découvrir</a>
+                </div>
+            </section>
+
+            <!-- DYNAMIC WHITE SEO ABOUT US SECTION -->
+            <section class="seo-about-white">
+                <div class="seo-aw-container">
+                    
+                    <div class="seo-aw-top">
+                        <span class="seo-aw-subtitle fade-up">L'Excellence Asiatique</span>
+                        <h2 class="seo-aw-title fade-up">L'Héritage<br>de la Beauté<br><span class="italic-serif">Organique.</span></h2>
+                    </div>
+
+                    <!-- The image collage for About Us -->
+                    <div class="seo-collage-container fade-up" data-delay="0.2">
+                        <div class="seo-col-img-wrapper seo-col-1">
+                            <img src="assets/probio_1.jpg" alt="Probio Eye Cream">
+                        </div>
+                        <div class="seo-col-img-wrapper seo-col-2">
+                            <img src="assets/probio_2.jpg" alt="Probio Eye Cream Model">
+                        </div>
+                        <div class="seo-col-img-wrapper seo-col-3">
+                            <img src="assets/probio_3.jpg" alt="Probio Enrich Cream">
+                        </div>
+                    </div>
+
+                    <div class="seo-aw-grid">
+                        <div class="seo-aw-item item-left fade-up" data-delay="0.1">
+                            <h3>Cosmétique Haute Performance</h3>
+                            <p>Découvrez notre gamme de soins visage inspirée par les rituels ancestraux. En tant que marque de beauté japonaise de luxe, nous fusionnons la pureté des ingrédients organiques avec une science cosmétique d'avant-garde.</p>
+                        </div>
+                        
+                        <div class="seo-aw-item item-center fade-up" data-delay="0.3">
+                            <h3>Routine Skincare K-Beauty</h3>
+                            <p>Des sérums éclat aux crèmes revitalisantes, chaque produit est conçu pour s'intégrer parfaitement à votre routine quotidienne, respectueuse des peaux les plus sensibles.</p>
+                        </div>
+
+                        <div class="seo-aw-item item-right fade-up" data-delay="0.5">
+                            <h3>L'Innovation J-Beauty</h3>
+                            <p>Reconnus pour notre expertise en soins hydratants, nous redéfinissons le standard du "glass skin" avec une authenticité orientale et l'exigence du luxe absolu.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- NEW IN SECTION -->
+            <section class="new-in-section">
+                <div class="ni-container">
+                    <div class="ni-grid">
+                        
+                        <!-- Row 1 -->
+                        <div class="ni-title-wrap">
+                            <h2 class="ni-title">NEW IN</h2>
+                        </div>
+                        
+                        <div class="ni-item ni-item-1">
+                            <div class="ni-img-box">
+                                <img src="assets/new_1.jpg" alt="Poremizing Ampoule">
+                            </div>
+                            <div class="ni-info">
+                                <span class="ni-name">POREMIZING AMPOULE</span>
+                                <span class="ni-price">20€</span>
+                            </div>
+                        </div>
+
+                        <div class="ni-item ni-item-2">
+                            <div class="ni-img-box">
+                                <img src="assets/new_large.jpg" alt="Masque Pink Glow">
+                            </div>
+                            <div class="ni-info">
+                                <span class="ni-name">MASQUE PINK GLOW</span>
+                                <span class="ni-price">22€</span>
+                            </div>
+                        </div>
+
+                        <!-- Row 2 -->
+                        <div class="ni-item ni-item-3">
+                            <div class="ni-img-box">
+                                <img src="assets/new_2.jpg" alt="Tea-Trica BHA Foam">
+                            </div>
+                            <div class="ni-info">
+                                <span class="ni-name">TEA-TRICA BHA FOAM</span>
+                                <span class="ni-price">15€</span>
+                            </div>
+                        </div>
+
+                        <div class="ni-item ni-item-4">
+                            <div class="ni-img-box">
+                                <img src="assets/innisfree.jpg" alt="Super Volcanic Pore Clay Mask">
+                            </div>
+                            <div class="ni-info">
+                                <span class="ni-name">VOLCANIC CLAY MASK</span>
+                                <span class="ni-price">18€</span>
+                            </div>
+                        </div>
+
+                        <div class="ni-item ni-item-text">
+                            <h3 class="ni-text-title">Découvrez nos nouveautés.</h3>
+                            <p class="ni-text-desc">Des formulations innovantes et naturelles pour révéler l'éclat de votre peau.</p>
+                            <a href="#" class="ni-text-link">Voir tout →</a>
+                        </div>
+
+                        <div class="ni-item ni-item-5">
+                            <div class="ni-img-box">
+                                <img src="assets/carousel_2.jpg" alt="Baume à Lèvres">
+                            </div>
+                            <div class="ni-info">
+                                <span class="ni-name">BAUME À LÈVRES</span>
+                                <span class="ni-price">16€</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- LOGO MARQUEE SECTION -->
+            <section class="logo-marquee-section">
+                <div class="marquee-track">
+                    <div class="marquee-content">
+                        <span>VOGUE</span><span class="dot">•</span>
+                        <span>ELLE</span><span class="dot">•</span>
+                        <span>GLAMOUR</span><span class="dot">•</span>
+                        <span>COSMOPOLITAN</span><span class="dot">•</span>
+                        <span>VANITY FAIR</span><span class="dot">•</span>
+                    </div>
+                    <div class="marquee-content">
+                        <span>VOGUE</span><span class="dot">•</span>
+                        <span>ELLE</span><span class="dot">•</span>
+                        <span>GLAMOUR</span><span class="dot">•</span>
+                        <span>COSMOPOLITAN</span><span class="dot">•</span>
+                        <span>VANITY FAIR</span><span class="dot">•</span>
+                    </div>
+                    <div class="marquee-content">
+                        <span>VOGUE</span><span class="dot">•</span>
+                        <span>ELLE</span><span class="dot">•</span>
+                        <span>GLAMOUR</span><span class="dot">•</span>
+                        <span>COSMOPOLITAN</span><span class="dot">•</span>
+                        <span>VANITY FAIR</span><span class="dot">•</span>
+                    </div>
+                    <div class="marquee-content">
+                        <span>VOGUE</span><span class="dot">•</span>
+                        <span>ELLE</span><span class="dot">•</span>
+                        <span>GLAMOUR</span><span class="dot">•</span>
+                        <span>COSMOPOLITAN</span><span class="dot">•</span>
+                        <span>VANITY FAIR</span><span class="dot">•</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION 3: La Collection Privée Banner -->
+            <section class="banner-collection">
+                <div class="bc-header fade-up-text">
+                    <h2 class="italic-serif">Notre Sélection Exclusive.</h2>
+                    <p>Découvrez nos pièces maîtresses, réunies dans une collection exclusive.</p>
+                </div>
+                <div class="bc-image-container">
+                    <img src="assets/collection_banner.jpg" alt="Collection Privée Banner">
+                </div>
+            </section>
+
+            <!-- PREMIUM EDITORIAL FOOTER -->
+            <footer class="footer-premium">
+                <div class="footer-top">
+                    <div class="footer-col-brand">
+                        <img src="assets/logo.svg" alt="Cutelaza Logo" class="footer-brand-logo">
+                        <p class="footer-tagline">L'éclat naît à l'intérieur de vous.</p>
+                    </div>
+                    <div class="footer-col-links">
+                        <h3>Boutique</h3>
+                        <ul>
+                            <li><a href="#">Soins du visage</a></li>
+                            <li><a href="#">Corps & Bain</a></li>
+                            <li><a href="#">Nouveautés</a></li>
+                            <li><a href="#">Coffrets</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col-links">
+                        <h3>L'Univers</h3>
+                        <ul>
+                            <li><a href="#">À propos</a></li>
+                            <li><a href="#">Notre Philosophie</a></li>
+                            <li><a href="#">Ingrédients</a></li>
+                            <li><a href="#">Journal</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col-newsletter">
+                        <h3>Rejoignez le Cercle</h3>
+                        <p>Accès exclusif et -15% sur la collection privée.</p>
+                        <form class="newsletter-form">
+                            <input type="email" placeholder="Votre adresse email" required>
+                            <button type="submit">→</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="footer-bottom-premium">
+                    <div class="footer-social">
+                        <a href="#">Instagram</a>
+                        <a href="#">TikTok</a>
+                        <a href="#">Pinterest</a>
+                    </div>
+                    <div class="footer-legal">
+                        <span>© 2026 Cutelaza. Tous droits réservés.</span>
+                        <a href="#">Mentions Légales</a>
+                        <a href="#">Confidentialité</a>
+                    </div>
+                </div>
+            </footer>
+
+        </div>
+    </main>
+
+    <!-- CHATBOT WIDGET -->
+    <div class="chatbot-widget">
+        <button class="chatbot-toggle" id="chatbotToggle">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+            </svg>
+        </button>
+        <div class="chatbot-window" id="chatbotWindow">
+            <div class="chatbot-header">
+                <div class="cb-info">
+                    <strong>Cutelaza Concierge</strong>
+                    <span>En ligne</span>
+                </div>
+                <button class="chatbot-close" id="chatbotClose">×</button>
+            </div>
+            <div class="chatbot-body">
+                <div class="chat-msg system">
+                    Bonjour ! Comment puis-je vous aider aujourd'hui ? Cherchez-vous un conseil beauté spécifique ?
+                </div>
+            </div>
+            <div class="chatbot-footer">
+                <input type="text" placeholder="Écrivez votre message...">
+                <button>→</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
+    <script src="main.js?v=2"></script>
+    <script src="chatbot.js?v=2"></script>
+    <script src="hero3d.js?v=2"></script>
+    <script src="scroll-journey.js"></script>
+</body>
+</html>
